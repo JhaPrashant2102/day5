@@ -9,6 +9,7 @@
  */
 import java.util.*;
 import java.util.regex.*;
+import java.lang.*;
 
 public class ValidationClass {
 	public static void main(String args[]) {
@@ -76,11 +77,37 @@ public class ValidationClass {
 		}
 
 		String password;
-		// UC5
+		/*
+		 * // UC5
+		 * 
+		 * while (true) { System.out.println("Enter your password :"); password =
+		 * sc.nextLine(); String regex = "^(.){8,}$"; Pattern pattern =
+		 * Pattern.compile(regex); Matcher matcher = pattern.matcher(password); if
+		 * (matcher.matches()) { break; } else {
+		 * System.out.println("Wrong format you'll have to go again!"); } }
+		 */
+
+		/*
+		 * // UC6 while (true) { System.out.println("Enter your password :"); password =
+		 * sc.nextLine(); String regex = "^(?=.*[A-Z])[a-zA-Z]{8,}$"; Pattern pattern =
+		 * Pattern.compile(regex); Matcher matcher = pattern.matcher(password); if
+		 * (matcher.matches()) { break; } else {
+		 * System.out.println("Wrong format you'll have to go again!"); } }
+		 */
+		/*
+		 * // UC7 while (true) { System.out.println("Enter your password :"); password =
+		 * sc.nextLine(); String regex = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z]{8,}$"; Pattern
+		 * pattern = Pattern.compile(regex); Matcher matcher =
+		 * pattern.matcher(password); if (matcher.matches()) { break; } else {
+		 * System.out.println("Wrong format you'll have to go again!"); } }
+		 */
+		
+		/*
+		// UC8
 		while (true) {
 			System.out.println("Enter your password :");
 			password = sc.nextLine();
-			String regex = "^(.){8,}";
+			String regex = "^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z]{8,}$";
 			Pattern pattern = Pattern.compile(regex);
 			Matcher matcher = pattern.matcher(password);
 			if (matcher.matches()) {
@@ -89,6 +116,21 @@ public class ValidationClass {
 				System.out.println("Wrong format you'll have to go again!");
 			}
 		}
-
+		*/
+		//UC9
+		while (true) {
+			System.out.println("Enter your password :");
+			password = sc.nextLine();
+			String regex = "^(?=.[!@#$%^&*]{1}?)(?=.*[A-Z])(?=.*[0-9])[a-zA-Z]{8,}$";
+			Pattern pattern = Pattern.compile(regex);
+			Matcher matcher = pattern.matcher(password);
+			if (matcher.matches()) {
+				break;
+			} else {
+				System.out.println("Wrong format you'll have to go again!");
+			}
+		}
+		
+		User user = new User(firstName,lastName,emailId,phoneNumber,password);
 	}
 }
