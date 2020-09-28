@@ -53,7 +53,7 @@ public class EmailId {
 		emailList.add("abc.@gmail.com");
 		emailList.add("abc@abc@gmail.com");
 		emailList.add("abc@gmail.com.1a");
-		emailList.add("abc@yahoo.com.aa.uu");
+		emailList.add("abc@yahoo.com.aa.uu"); //doubt
 		
 		String regex = "^[a-zA-Z0-9_+-]+(?:\\.[a-zA-Z0-9]+)*@([a-zA-Z0-9]+\\.)+[a-zA-Z]{2,3}$";
 		 
