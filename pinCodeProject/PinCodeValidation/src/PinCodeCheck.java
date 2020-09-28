@@ -19,5 +19,13 @@ public class PinCodeCheck {
 		
 		//UC2
 		System.out.println(Pattern.matches("[0-9]{6}","A400088"));
+		
+		//UC3
+		System.out.println(Pattern.matches("^[0-9]{6}$","400088B"));
+		
+		//UC3 extended
+		System.out.println(Pattern.matches("^[0-9]{3}[: -:][0-9]{3}$","400-088"));
+		//[: :] can also be used instead of \\ {0,1} and vice versa
+		
 	}
 }
